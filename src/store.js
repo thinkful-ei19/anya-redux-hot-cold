@@ -1,5 +1,9 @@
 import {createStore} from 'redux';
+//import { composeWithDevTools } from 'redux-devtools-extension';
+import {gameReducer} from './reducers'
 
 export default createStore(
-    
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+    gameReducer, 
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    //composeWithDevTools()
+);
